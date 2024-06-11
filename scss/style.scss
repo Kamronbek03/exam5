@@ -109,7 +109,8 @@ main {
 }
 
 .country-card {
-  flex: 1 1 264px;
+  max-width: 295px;
+  width: 100%;
   background-color: $element-light;
   border-radius: 8px;
   overflow: hidden;

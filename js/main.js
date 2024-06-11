@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const main = document.querySelector("main");
     main.innerHTML = `
         <div class="container">
-          <button class="back" style="display: flex; align-items: center; gap: 10px; padding: 10px 32px; margin-bottom: 80px; border: none; background-color: inherit; font-size: 16px; font-weight: 300; color: #111517; cursor:pointer" onclick="window.location.hash = 'index.html'"><img src="../images/back.svg" alt="back"> Back</button>
+          <button class="back" style="display: flex; align-items: center; gap: 10px; padding: 10px 32px; margin-bottom: 80px; border: none; background-color: inherit; font-size: 16px; font-weight: 300; color: #111517; cursor:pointer" onclick="window.location.hash = ''"><img src="../images/back.svg" alt="back"> Back</button>
           <div style="display:flex; align-items: flex-start; gap: 120px" class="country-detail">
             <img style="max-width: 560px; width: 100%" src="${
               country.flag
