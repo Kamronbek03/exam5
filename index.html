@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where in the world?</title>
+    <link rel="stylesheet" href="./scss/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="#">Where in the world?</a>
+        <button id="dark-mode-toggle">
+          <img src="./images/moon.svg" alt="Moon" /> Dark Mode
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="part1" style="margin-bottom: 48px">
+        <div class="container">
+          <div class="controls">
+            <div class="search">
+              <label for="search">
+                <img src="./images/search.svg" alt="search..." />
+              </label>
+              <input
+                type="text"
+                id="search"
+                placeholder="Search for a country..."
+              />
+            </div>
+            <select id="region-filter">
+              <option value="all">Filter by Region</option>
+              <option value="Africa">Africa</option>
+              <option value="Americas">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="Oceania">Oceania</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <section class="part2">
+        <div class="container" id="countries-container">
+          <!-- Country cards will be dynamically inserted here -->
+        </div>
+      </section>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+@font-face {
+  font-family: Nunito_sans;
+  src: url(../fonts/NunitoSans_7pt_Condensed-Regular.ttf);
+}
+
+$background-light: #ffffff;
+$background-light1: #f5f5f5;
+$background-dark: #202c36;
+$text-light: #ffffff;
+$text-dark: #111517;
+$element-light: #ffffff;
+$element-dark: #2b3844;
+
+body {
+  font-family: Nunito_sans;
+  background-color: $background-light1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: $element-light;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px 0;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    color: $text-dark;
+  }
+  #dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: $text-dark;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+
+main {
+  padding-top: 128px;
+  .controls {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .search {
+      max-width: 480px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      box-shadow: 0px 2px 9px 0px #0000000e;
+      background-color: $background-light;
+      border-radius: 4px;
+      padding: 19px 32px;
+      input {
+        width: 100%;
+        border: none;
+        background-color: inherit;
+        outline: none;
+      }
+    }
+    select {
+      padding: 19px 77px 19px 24px;
+      border: none;
+      appearance: none;
+      background-image: url(../images/str-icon.svg);
+      background-repeat: no-repeat;
+      background-position: right 24px center;
+      background-size: 16px;
+      box-shadow: 0px 2px 9px 0px #0000000e;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+#countries-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.country-card {
+  flex: 1 1 264px;
+  background-color: $element-light;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+
+  img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .country-info {
+    padding: 16px 24px;
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 4px 0;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dark-mode {
+  background-color: $background-dark;
+  color: $text-light;
+
+  header {
+    background-color: $element-dark;
+    a {
+      color: $text-light;
+    }
+    #dark-mode-toggle {
+      background-color: inherit;
+      color: $text-light;
+    }
+  }
+
+  main {
+    .controls {
+      .search {
+        background-color: $element-dark;
+        input {
+          color: $text-light;
+        }
+      }
+      select {
+        background-color: $element-dark;
+        background-image: $element-light;
+        color: $text-light;
+      }
+    }
+
+    .country-card {
+      background-color: $element-dark;
+      h2,
+      p {
+        color: $text-light;
+      }
+    }
+  }
+}
+
+@media (max-width: 976px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  header {
+    padding: 16px 0;
+  }
+
+  .search {
+    max-width: 100%;
+  }
+
+  .country-card {
+    flex: 1 1 100%;
+  }
+}
